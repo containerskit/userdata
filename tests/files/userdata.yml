@@ -1,0 +1,10 @@
+files:
+- path: tests/files/tmp/file1
+  text: file1
+  type: file
+- path: tests/files/tmp/dir1
+  type: dir
+- path: tests/files/tmp/dir2/dir2.1/file1
+  text: dir2/file1
+  type: file
+  link: tests/files/tmp/dir1/file2

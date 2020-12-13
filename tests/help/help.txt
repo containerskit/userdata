@@ -1,0 +1,37 @@
+
+userdata -path /path/to/userdata/file
+
+Read userdata yaml file and replicates its content on the filesystem.
+
+Example:
+
+files:
+- mode: 0644
+  path: file1
+  text: |
+    content of file1
+- mode: 0755
+  type: dir
+  path: dir1/file1
+  text: |
+    content of dir1/file1
+- mode: 0400
+  path: ssh
+  link: /root/.ssh/authorized_keys
+  text: |
+    ssh public key
+
+will produce the following:
+
+cwd
+├── dir1
+│   └── file1
+├── file1
+└── ssh
+
+Arguments:
+
+  -help print this message and exist
+
+  -path string
+    	userdata file path
