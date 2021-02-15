@@ -12,9 +12,7 @@ files:
     content of file1
 - mode: 0755
   type: dir
-  path: dir1/file1
-  text: |
-    content of dir1/file1
+  path: dir1/dir1.1
 - mode: 0400
   path: ssh
   link: /root/.ssh/authorized_keys
